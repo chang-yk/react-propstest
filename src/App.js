@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const foodILike = [
   {
@@ -30,6 +31,11 @@ function Food({name}){
     </div>
   )
 }
+
+Food.propTypes = {
+  name :  PropTypes.number.isRequired
+}
+
 
 function renderFood(dish){
     return  <Food key = {dish.id} name ={dish.name}></Food>
